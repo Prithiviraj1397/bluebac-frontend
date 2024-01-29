@@ -1,0 +1,222 @@
+:root {
+  --primary-rgb: 30, 25, 54;
+  --secondary-rgb: 227, 49, 113;
+  --primary-color: rgb(var(--primary-rgb));
+  --secondary-color: rgb(var(--secondary-rgb));
+}
+
+.authentication {
+  .authentication-cover {
+    .swiper {
+      border-radius: 0px;
+      height: 100%;
+      .swiper-slide {
+        position: relative;
+        &::before {
+          content: "";
+          background: linear-gradient(
+            145deg,
+            rgba(var(--primary-rgb), 0.4) 20%,
+            rgba(var(--secondary-rgb), 1) 100%
+          );
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+          z-index: 1;
+        }
+        img {
+          object-position: center;
+        }
+      }
+    }
+  }
+}
+
+.alert_snack_bar {
+  .toast {
+    background: unset;
+    border: none;
+    box-shadow: none;
+  }
+  .alert_container {
+    position: relative;
+    color: inherit;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 15px;
+    &:before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      display: inline-block;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      border-radius: 15px;
+    }
+    .snackMessage {
+      display: flex;
+      align-items: center;
+      font-size: 13px;
+      font-weight: 600;
+      .statusIcon {
+        display: flex;
+        align-items: center;
+        border-radius: 50%;
+        font-size: 20px;
+        line-height: normal;
+      }
+      .statusContent {
+        padding-left: 15px;
+      }
+    }
+
+    .close_btn {
+      svg {
+        font-size: 18px;
+      }
+    }
+  }
+  &.success {
+    .alert_container {
+      background: #eaffea;
+      box-shadow: 0px 4px 15px rgb(0 118 0/0.3);
+      &:before {
+        box-shadow: 0px 4px 30px #eaffea;
+      }
+      .snackMessage {
+        color: #008000;
+        .statusIcon {
+          box-shadow: 0px 4px 10px rgb(0 118 0/0.5);
+        }
+      }
+    }
+  }
+
+  &.danger {
+    .alert_container {
+      background: #ffebeb;
+      box-shadow: 0px 4px 15px rgb(255 0 0 / 50%);
+      &:before {
+        box-shadow: 0px 4px 30px #ffebeb;
+      }
+      .snackMessage {
+        color: #ff0000;
+        .statusIcon {
+          box-shadow: 0px 4px 10px rgb(255 0 0/0.5);
+        }
+      }
+    }
+  }
+
+  &.info {
+    .alert_container {
+      background: #fff7df;
+      box-shadow: 0px 4px 15px rgb(255 230 156/0.5);
+      &:before {
+        box-shadow: 0px 4px 30px rgb(131 100 0);
+      }
+      .snackMessage {
+        color: #664d03;
+        .statusIcon {
+          box-shadow: 0px 4px 10px rgb(191 146 0);
+        }
+      }
+    }
+  }
+}
+
+.auth_image_content {
+  .top_img_sec {
+    .auth_vector_img {
+      width: 300px;
+      display: block;
+      margin: 40px auto 30px;
+    }
+  }
+  .content {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}
+.tab_btn {
+  font-size: 0.813rem;
+  padding: 0.5rem 1rem;
+}
+.side_dialog_box {
+  &.modal {
+    &.fade {
+      .modal-dialog {
+        transform: translate(100%, 0px);
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-right: unset;
+        margin-left: auto;
+        max-width: 45%;
+        height: 100%;
+        .modal-content {
+          background: var(--default-body-bg-color);
+          width: 100%;
+          border-radius: 0px;
+          height: 100%;
+          .modal-header,
+          .modal-footer {
+            border-radius: 0px;
+          }
+          .modal-header {
+            padding: 0px;
+            width: max-content;
+            position: absolute;
+            right: 25px;
+            top: 20px;
+            z-index: 2;
+            .modal-title {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+    &.show {
+      .modal-dialog {
+        transform: none;
+      }
+    }
+  }
+}
+.side_modal_header {
+  background: #ffffff;
+  padding: 15px 25px;
+  box-shadow: 0px 5px 12px rgb(0 0 0/0.05);
+  position: relative;
+  z-index: 1;
+}
+.side_modal_footer {
+  background: #ffffff;
+  padding: 10px 25px;
+  box-shadow: 0px -5px 12px rgb(0 0 0/0.05);
+  position: relative;
+  z-index: 1;
+}
+.side_modal_content {
+  padding: 10px 25px;
+  overflow-y: auto;
+}
+.modal_title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+.modal_sub_title {
+  font-size: 18px;
+  font-weight: 600;
+}
+.select_button_groups{
+  display: flex;
+}
